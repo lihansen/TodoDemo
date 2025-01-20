@@ -24,14 +24,14 @@ function App() {
           setName(data.name);
         }
       });
-  }, []);
+  }, [isloggedin]);
 
   return (
     <>
       {isloggedin ? (
-        <Todo isloggedin={isloggedin} name={name} />
+        <Todo name={name} />
       ) : (
-        <Login setIsloggedin={setIsloggedin } />
+        <Login setIsloggedin={setIsloggedin} />
       )}
     </>
   );
