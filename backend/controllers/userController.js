@@ -58,7 +58,8 @@ async function getAllUser(req, res) {
 }
 
 async function isLoggedin(req, res) {
-    res.json({ message: true });
+    const user = req.user;
+    res.json({ message: true, name:user.username });
 }
 
 const userController = {
